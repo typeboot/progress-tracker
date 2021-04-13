@@ -1,7 +1,7 @@
 FROM node:12.18.1 as builder
 RUN mkdir -p /opt/work
 COPY . /opt/work/source
-RUN cd /opt/work/source && npm run build
+RUN cd /opt/work/source && npm install && npm run build
 
 FROM node:slim
 RUN mkdir /opt/app
