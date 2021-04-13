@@ -1,0 +1,29 @@
+type Query {
+    status: String!
+    apps: [App]!
+    migrations(appName: ID!): [Migration]!
+    runs(appName: ID!): [Run]!
+}
+
+type App {
+    name: String!
+    total: String
+}
+
+type Migration {
+    app: String
+    script_id: Int
+    script_name: String
+    batch_no: String
+    executed: String
+    status: String
+    team: String
+}
+type Run {
+    app: String
+    batch_no: String
+    executed: String
+    status: String
+    files: Int
+    statements: Int
+}

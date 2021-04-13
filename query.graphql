@@ -1,0 +1,23 @@
+# Write your query or mutation here
+query{
+    apps{
+        name
+        total
+    }
+    migrations(appName:"core"){
+        app
+        batch_no
+        status
+        team
+        executed
+    }
+    runs(appName:"core"){
+        batch_no
+        app
+        batch_no
+        executed
+        status
+        files
+        statements
+    }
+}
